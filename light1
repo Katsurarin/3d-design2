@@ -1,0 +1,33 @@
+/* simply make the led into rgb color
+int led1=9;
+int led2=10;
+int led3=11;
+void setup()
+{
+pinMode(led1,OUTPUT);
+pinMode(led2,OUTPUT);
+pinMode(led3,OUTPUT);
+}
+void setColor(int red,int green,int blue)
+{
+analogWrite(led1,255-red);
+analogWrite(led2,255-green);
+analogWrite(led3,255-blue);
+}
+void loop()
+{
+setColor(255,0,0); //Red
+delay(100);
+setColor(0,255,0); //Green
+delay(100);
+setColor(0,0,255); //blue
+delay(100);
+setColor(255,255,0); //Yellow
+delay(100);
+setColor(0,255,255); //Light Green
+delay(100);
+setColor(255,0,255); //Purple
+delay(100);
+setColor(255,255,255); //White
+delay(100);
+}
