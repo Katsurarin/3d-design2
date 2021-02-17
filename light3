@@ -1,0 +1,19 @@
+void setup()
+{
+for(int i=9;i<12;i++) {
+pinMode(i,OUTPUT);
+digitalWrite(i,LOW);
+}
+}
+void loop() {
+for(int i=9;i<12;i++)
+{ for(int j=0;j<255;j++) {
+analogWrite(i,j);
+delay(10); }
+for(int j=255;j>0;j--)
+{
+analogWrite(i,j);
+delay(10);
+}
+}
+}
