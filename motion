@@ -1,0 +1,13 @@
+#include Servo coreservo;
+void setup() {
+coreservo.attach(10);
+/*Attach the named servo object to Digital IO 13, use following syntax: servoname.attach(Pin#, minimum Pulse width (ms), maximum pulse width (ms)); servoname.attach(Pin#, minimum Pulse width (ms), maximum pulse width (ms)); if you want to define the pulse widths for your motor*/
+}
+void loop() {
+coreservo.write(0);
+delay(200);
+coreservo.write(90);
+delay(200);
+coreservo.write(180);
+delay(200);
+}
