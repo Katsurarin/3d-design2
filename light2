@@ -1,0 +1,35 @@
+/*
+* Led_Flash
+* Turn on LED lights 1~6 in turn, turn off LED lights 6~1 in turn, and so on
+*/
+int delayTime = 200;
+int ledPin;
+void setup()
+{
+for (ledPin = 1; ledPin < 7; ledPin++)
+//Set 1~6 digital pins as output mode in turn
+{ pinMode(ledPin, OUTPUT);
+//Set the ledPin pin to output mode
+}
+}
+void loop() {
+for (ledPin=1; ledPin < 7; ledPin++)
+//Turn on the led lights connected to pins 1 to 6 every delayTime
+{
+digitalWrite(ledPin, HIGH);
+//Turn on the led light connected to the ledPin pin
+delay(delayTime);
+//delayTime
+}
+for (
+ledPin=6;
+ledPin> 0;
+ledPin--)
+//Turn off the led lights connected to pins 6~1 every delayTime
+{
+digitalWrite(ledPin, LOW);
+//Turn off the led light connected to the ledPin pin
+delay(delayTime);
+//delayTime
+}
+}
